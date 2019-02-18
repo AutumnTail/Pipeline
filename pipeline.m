@@ -245,7 +245,7 @@ function write_study_report(GEO_number)
     
     fprintf(draft,'\n\t%s\n', ['\texttt{' strrep(condition, '_', '\_') '}' ' & ' num2str(length(results{condition_iter_index}.step_2.time_points)) ' & ' num2str(results{condition_iter_index}.step_3.number_of_statistically_significant_DRGs) ' & ' num2str(length(results{condition_iter_index}.step_3.indices_of_top_DRGs)) ' & ' num2str(length(results{condition_iter_index}.step_4.list_of_grms)) ' \\ \hline']);
     
-    statistics_of_current_analysis = {GEO_number, condition, num2str(size(results{condition_iter_index}.step_2.time_points,1)), num2str(results{condition_iter_index}.step_3.number_of_statistically_significant_DRGs), num2str(size(results{condition_iter_index}.step_3.list_of_top_DRGs,1)), num2str(size(results{condition_iter_index}.step_4.list_of_grms,2))};    
+    statistics_of_current_analysis = {GEO_number, condition, num2str(size(results{condition_iter_index}.step_2.time_points,1)), num2str(results{condition_iter_index}.step_3.number_of_statistically_significant_DRGs), num2str(size(results{condition_iter_index}.step_3.list_of_top_DRGs,1)), num2str(length(results{condition_iter_index}.step_4.list_of_grms))};    
     statistics_of_analyses = [statistics_of_analyses; statistics_of_current_analysis];
 
   end
